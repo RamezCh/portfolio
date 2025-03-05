@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# 🌟 Ramez Chreide - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website repository! 🚀  
+Built using **React, TailwindCSS, and TypeScript**, this website showcases my **projects, skills, and expertise** to attract recruiters and collaborators.
 
-Currently, two official plugins are available:
+## ✨ Website Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Introduction** – A brief introduction about me and my work.  
+2. **Services** – The services I offer in software development and DevOps.  
+3. **Tools** – The technologies and tools I work with.  
+4. **About Me** – My background, education, and experience.  
+5. **Skills & Expertise** – A categorized list of my technical skills.  
+6. **Projects** – A collection of my best work with descriptions and links.  
+7. **Contact Me** – Get in touch via email or social media.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 Tech Stack
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**: React.js, TypeScript, TailwindCSS  
+- **State Management**: React Hooks  
+- **Deployment**: Vercel
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Live Demo
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Check out the live version of my portfolio here:  
+🔗 [Portfolio Website](https://ramezch.github.io/ramez-portfolio-website/)
+
+---
+
+## 📬 Contact
+
+Let's connect!
+
+[LinkedIn](https://www.linkedin.com/in/ramez-chreide)  
+[GitHub](https://github.com/RamezCh)
