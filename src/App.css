@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+    background-image:
+        /* Left edge vertical ellipses */
+            radial-gradient(
+                    ellipse 200px 240px at left center,
+                    transparent 140px,
+                    rgba(216, 180, 254, 0.6) 140px,
+                    rgba(216, 180, 254, 0.6) 160px,
+                    transparent 160px
+            ),
+                /* Right edge vertical ellipses */
+            radial-gradient(
+                    ellipse 200px 240px at right center,
+                    transparent 140px,
+                    rgba(216, 180, 254, 0.6) 140px,
+                    rgba(216, 180, 254, 0.6) 160px,
+                    transparent 160px
+            );
+
+    background-size: 100% 1000px;
+    background-position:
+            0 0,
+            0 300px;
+    background-repeat: repeat-y;
+}
