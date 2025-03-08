@@ -7,6 +7,11 @@
     font-family: 'Vampiro One', cursive;
 }
 
+.active {
+    color: #7051EF;
+    font-weight: bold;
+}
+
 .gradient-text {
     background: linear-gradient(to right, #8D74F2, #7051EF);
     -webkit-background-clip: text;
