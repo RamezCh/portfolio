@@ -19,6 +19,13 @@
     color: transparent;
 }
 
+.strong-gradient-text {
+    background: linear-gradient(to right, #7051EF, #402E89);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-image:
