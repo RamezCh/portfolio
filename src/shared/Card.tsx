@@ -51,7 +51,7 @@ export const Card: FC<Props> = ({ title, titleSize, subtitleWords, subtitleSize,
     }, [currentIndex, currentWordIndex, subtitleWords]);
 
     return (
-        <div>
+        <div className="flex flex-col justify-evenly">
             <h2 className={"font-bold " + titleSize}>{title}</h2>
             {subtitleWords && (
                 <h3 className={"strong-gradient-text " + subtitleSize} style={{ minHeight: "1em" }}>
