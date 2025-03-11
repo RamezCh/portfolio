@@ -15,7 +15,7 @@ export const ToolsPad = () => {
         setLastIndex( (prev) => prev > 3 ? prev - 3 : 3);
     }
 
-    return <section id="tools">
+    return <div>
         <CenteredTitle title="Tools" />
         {/* Carousel */}
         <div className="flex flex-row items-center justify-between my-20 p-10">
@@ -25,5 +25,5 @@ export const ToolsPad = () => {
             </div>
             <CircleWithChevron direction="right" enabled={tools.length - 1 >= lastIndex} onClick={handleIncrement}/>
         </div>
-    </section>
+    </div>
 }

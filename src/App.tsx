@@ -8,19 +8,23 @@ import {Contact} from "./components/Contact.tsx";
 import {ToolsMobile} from "./components/ToolsMobile.tsx";
 import {ToolsPad} from "./components/ToolsPad.tsx";
 import {aboutMe, expertise} from "./data.ts";
+import {NavbarMobile} from "./components/NavbarMobile.tsx";
 
 function App() {
 
     return (
         <>
-            <Navbar/>
+            <div className="hidden lg:block"><Navbar/></div>
+            <div className="lg:hidden"><NavbarMobile/></div>
             <div className="w-full h-36 block"></div>
             <div className="relative z-1 m-8">
                 <Home/>
                 <Services/>
-                <div className="hidden 2xl:block"><Tools/></div>
-                <div className="hidden xl:block 2xl:hidden"><ToolsPad/></div>
-                <div className="xl:hidden"><ToolsMobile/></div>
+                <section id="tools">
+                    <div className="hidden 2xl:block"><Tools/></div>
+                    <div className="hidden xl:block 2xl:hidden"><ToolsPad/></div>
+                    <div className="xl:hidden"><ToolsMobile/></div>
+                </section>
                 {/* About Me */}
                 <ImageCard {...aboutMe}/>
                 {/* Expertise */}
