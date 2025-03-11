@@ -4,8 +4,8 @@ import {Card} from "../shared/Card.tsx";
 import {SocialMedia} from "../shared/SocialMedia.tsx";
 
 export const Home = () => {
-    return <section id="home" className="flex flex-row justify-evenly">
-        <div className="mt-8 w-[38%]">
+    return <section id="home" className="flex flex-col-reverse lg:flex-row justify-evenly">
+        <div className="mt-8 w-full lg:w-[38%]">
             <Card title="RAMEZ" titleSize="text-8xl" subtitleWords={["SOFTWARE ENGINEER", "FULL-STACK DEVELOPER", "AI/ML ENGINEER"]} subtitleSize="text-6xl font-bold" text="I transform Ideas into Seamless Digital Experiences">
                 <SocialMedia/>
             </Card>
