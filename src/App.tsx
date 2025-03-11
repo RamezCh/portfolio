@@ -13,7 +13,7 @@ const aboutMe = {
     title: "About me",
     text: "I am fluent in Arabic, English, and German. I enjoy reading books, honing my skills, and tackling coding challenges. In my free time, I love playing competitive video games with my brothers and friends. I strongly believe in lifelong self-improvement and the importance of cherishing time with family and friends",
     imgLeft: true,
-    imgSize: "h-[450px]"
+    imgSize: "mx-auto md:w-[60%] lg:w-full md:h-[400px] lg:h-[450px]"
 }
 
 const expertise = {
@@ -23,7 +23,7 @@ const expertise = {
     title: "Skills & Expertise",
     text: "I have a solid foundation in backend development, machine learning, and DevOps, with hands-on experience in Python, Java, and JavaScript, along with frameworks like Spring and Flask. In ML, I’ve worked on data cleaning, model tuning, and deployment using Docker. I’m also comfortable with DevOps tools like Jenkins and Kubernetes, always striving to improve efficiency and automation. I’m constantly learning and aim to grow further in these areas",
     imgLeft: false,
-    imgSize: "h-[600px]"
+    imgSize: "md:h-[400px] lg:h-[600px]"
 }
 
 function App() {
