@@ -4,6 +4,7 @@ import {Home} from "./components/Home.tsx";
 import {Services} from "./components/Services.tsx";
 import {Tools} from "./components/Tools.tsx";
 import {ImageCard} from "./shared/ImageCard.tsx";
+import {Contact} from "./components/Contact.tsx";
 
 const aboutMe = {
     sectionID: 'about',
@@ -39,6 +40,7 @@ function App() {
                 <ImageCard {...aboutMe}/>
                 {/* Expertise */}
                 <ImageCard {...expertise}/>
+                <Contact/>
             </div>
         </>
     );
