@@ -21,7 +21,7 @@ const ContactForm: FC = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto p-6">
+        <div className="w-[80%] mx-auto p-20">
             <div className="space-y-4">
                 <InputField fullName={fullName} setter={setFullName} placeholder="Alex Smith" labelText="Full Name" />
                 <InputField fullName={subject} setter={setSubject} placeholder="Subject" labelText="Subject" />
