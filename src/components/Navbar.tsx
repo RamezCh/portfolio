@@ -1,32 +1,6 @@
 import {SmoothLink} from "../shared/SmoothLink.tsx";
 import Button from "../shared/Button.tsx";
-
-const navLinks = [
-    {
-        name: 'Home',
-        dest: 'home'
-    },
-    {
-        name: 'Services',
-        dest: 'services'
-    },
-    {
-        name: 'Tools',
-        dest: 'tools'
-    },
-    {
-        name: 'About me',
-        dest: 'about'
-    },
-    {
-        name: 'My Expertise',
-        dest: 'expertise'
-    },
-    {
-        name: 'Portfolio',
-        dest: 'portfolio'
-    }
-]
+import {navLinks} from "../data.ts";
 
 export const Navbar = () => {
 
