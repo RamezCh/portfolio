@@ -16,6 +16,6 @@ export const Home = () => {
                 </SmoothLink>
             </div>
         </div>
-        <img src="./Ramez_Picture_Hero.svg" alt="Picture of Ramez" />
+        <img src="./Ramez_Picture_Hero.svg" alt="Ramez, the person who built this website and showcases his portfolio" />
     </section>
 }

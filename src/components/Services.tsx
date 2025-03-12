@@ -6,7 +6,7 @@ export const Services = () => {
     return <section id="services" className="flex flex-col p-20 justify-evenly">
         <CenteredTitle title="Services" text="Delivered with Care and Attention" />
         <div className="flex flex-row justify-evenly gap-10 flex-wrap mt-20">
-            {services.map(service => <ServiceCard image={service.image} title={service.title} description={service.description} />)}
+            {services.map(service => <ServiceCard key={service.title} image={service.image} title={service.title} description={service.description} />)}
         </div>
     </section>
 }

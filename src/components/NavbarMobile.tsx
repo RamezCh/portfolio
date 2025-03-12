@@ -40,7 +40,7 @@ export const NavbarMobile = () => {
                 {isDropdownOpen && (
                     <div className="absolute right-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">
                         <div className="flex flex-col p-7">
-                            { navLinks.map((info) => <SmoothLink link={info.dest}>
+                            { navLinks.map((info) => <SmoothLink key={info.name} link={info.dest}>
                                 <span className="hover:text-[#7051EF] hover:text-lg transition-all duration-500 ease-in-out">
                                     {info.name}
                                 </span>

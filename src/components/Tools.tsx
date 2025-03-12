@@ -21,7 +21,7 @@ export const Tools = () => {
         <div className="flex flex-row items-center justify-between my-20 p-10">
             <CircleWithChevron direction="left" enabled={lastIndex > 4} onClick={handleDecrement}/>
             <div className="flex flex-row justify-between lg:gap-20 w-[80%] flex-wrap 2xl:flex-nowrap">
-                {tools.slice(lastIndex - 4, lastIndex).map( (tool) => <ServiceCard image={tool.image} title={tool.toolName} />)}
+                {tools.slice(lastIndex - 4, lastIndex).map( (tool) => <ServiceCard key={tool.toolName} image={tool.image} title={tool.toolName} />)}
             </div>
             <CircleWithChevron direction="right" enabled={tools.length - 1 >= lastIndex} onClick={handleIncrement}/>
         </div>

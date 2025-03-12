@@ -10,7 +10,7 @@ export const Navbar = () => {
         {/* Links */}
         <div className="flex gap-10">
             {
-                navLinks.map((info) => <SmoothLink link={info.dest}>
+                navLinks.map((info) => <SmoothLink key={info.name} link={info.dest}>
                     <span className="hover:text-[#7051EF] hover:text-lg transition-all duration-500 ease-in-out">
                         {info.name}
                     </span>

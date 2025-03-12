@@ -8,7 +8,7 @@ interface CircleWithChevronProps {
 
 const CircleWithChevron: FC<CircleWithChevronProps> = ({ direction, enabled, onClick }) => {
     return (
-        <div
+        <button
             onClick={onClick}
             className={`flex items-center justify-center w-22 h-22 border-2 border-[#D1E4FA] rounded-full transition-all duration-300 ${
                 enabled
@@ -23,7 +23,7 @@ const CircleWithChevron: FC<CircleWithChevronProps> = ({ direction, enabled, onC
       >
         {direction === "left" ? "<" : ">"}
       </span>
-        </div>
+        </button>
     );
 };
 
