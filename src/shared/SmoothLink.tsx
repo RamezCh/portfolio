@@ -1,10 +1,6 @@
 import { Link } from 'react-scroll';
-import {FC, ReactNode} from "react";
-
-interface SmoothLinkProps {
-    children: ReactNode;
-    link: string;
-}
+import {FC} from "react";
+import {SmoothLinkProps} from "../types.ts";
 
 export const SmoothLink: FC<SmoothLinkProps> = ({ children, link }) => {
     return (

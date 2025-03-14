@@ -1,10 +1,5 @@
 import { FC } from "react";
-
-interface CircleWithChevronProps {
-    direction: "left" | "right";
-    enabled: boolean;
-    onClick: () => void;
-}
+import {CircleWithChevronProps} from "../types.ts";
 
 const CircleWithChevron: FC<CircleWithChevronProps> = ({ direction, enabled, onClick }) => {
     const baseButtonStyle = "flex items-center justify-center w-22 h-22 border-2 border-[#D1E4FA] rounded-full transition-all duration-300";
@@ -18,7 +13,7 @@ const CircleWithChevron: FC<CircleWithChevronProps> = ({ direction, enabled, onC
 
 
     return (
-        <button onClick={onClick} className={buttonStyle}>
+        <button onClick={onClick} className={buttonStyle} disabled={!enabled}>
           <span className={spanStyle}>
             {direction === "left" ? "<" : ">"}
           </span>

@@ -1,13 +1,7 @@
 import { FC } from "react";
+import {CenteredTitleProps} from "../types.ts";
 
-interface Props {
-    title: string;
-    titleSize?: string;
-    text?: string;
-    textSize?: string;
-}
-
-export const CenteredTitle: FC<Props> = ({ title, titleSize, text, textSize }) => {
+export const CenteredTitle: FC<CenteredTitleProps> = ({ title, titleSize, text, textSize }) => {
     return (
         <div className="text-center">
             <h2 className={`font-bold ${titleSize ?? "text-5xl"}`}>{title}</h2>

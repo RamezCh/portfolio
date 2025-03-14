@@ -1,29 +1,25 @@
 import {CenteredTitle} from "../shared/CenteredTitle.tsx";
-import CircleWithChevron from "../shared/CircleWithChevron.tsx";
 import {ServiceCard} from "../shared/ServiceCard.tsx";
-import {useState} from "react";
 import {tools} from "../data.ts";
+import {Carousel} from "../shared/Carousel.tsx";
+import {ServiceCardProps} from "../types.ts";
 
 export const Tools = () => {
-    const [lastIndex, setLastIndex] = useState(4);
+    const transformedTools = tools.map(tool => ({
+        title: tool.toolName,
+        image: tool.image
+    }));
 
-    const handleIncrement = () => {
-        setLastIndex( (prev) => prev < tools.length ? prev + 4 : tools.length);
-    }
-
-    const handleDecrement = () => {
-        setLastIndex( (prev) => prev > 4 ? prev - 4 : 4);
-    }
-
-    return <div>
-        <CenteredTitle title="Tools" />
-        {/* Carousel */}
-        <div className="flex flex-row items-center justify-between my-20 p-10">
-            <CircleWithChevron direction="left" enabled={lastIndex > 4} onClick={handleDecrement}/>
-            <div className="flex flex-row justify-between lg:gap-20 w-[80%] flex-wrap 2xl:flex-nowrap">
-                {tools.slice(lastIndex - 4, lastIndex).map( (tool) => <ServiceCard key={tool.toolName} image={tool.image} title={tool.toolName} />)}
-            </div>
-            <CircleWithChevron direction="right" enabled={tools.length - 1 >= lastIndex} onClick={handleIncrement}/>
+    return (
+        <div>
+            <CenteredTitle title="Tools" />
+            <Carousel<ServiceCardProps>
+                numItemsPerPage={4}
+                itemsCollection={transformedTools}
+                ReactComponent={ServiceCard}
+                itemContainerStyle="flex flex-row justify-between lg:gap-20 w-[80%] flex-wrap 2xl:flex-nowrap"
+                containerStyle="flex flex-row items-center justify-between my-20 p-10"
+            />
         </div>
-    </div>
-}
+    );
+};

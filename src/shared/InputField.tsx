@@ -1,11 +1,6 @@
-interface Props {
-    labelText?: string;
-    fullName: string;
-    setter: (value: string) => void;
-    placeholder: string;
-}
+import {InputFieldProps} from "../types.ts";
 
-export const InputField = (props:Props) => {
+export const InputField = (props:InputFieldProps) => {
     return <div>
         { props.labelText && <label className="block text-sm font-medium text-gray-700">{props.labelText}</label>}
         <input

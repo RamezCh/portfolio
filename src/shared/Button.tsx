@@ -1,12 +1,5 @@
 import {FC} from "react";
-
-type ButtonProps = {
-    text: string,
-    onClick?: () => void,
-    downloadPath?: string,
-    fileName?:string,
-    isPrimary:boolean
-};
+import {ButtonProps} from "../types.ts";
 
 const Button: FC<ButtonProps> = ({
                                                   text,

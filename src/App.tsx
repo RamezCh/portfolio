@@ -9,6 +9,7 @@ import {ToolsMobile} from "./components/ToolsMobile.tsx";
 import {ToolsPad} from "./components/ToolsPad.tsx";
 import {aboutMe, expertise} from "./data.ts";
 import {NavbarMobile} from "./components/NavbarMobile.tsx";
+import {Portfolio} from "./components/Portfolio.tsx";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                 <ImageCard {...aboutMe}/>
                 {/* Expertise */}
                 <ImageCard {...expertise}/>
+                <Portfolio/>
                 <Contact/>
             </div>
         </>

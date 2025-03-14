@@ -1,10 +1,5 @@
 import {FC} from "react";
-
-interface IconLinkProps {
-    icon: string;
-    link: string;
-    altText: string;
-}
+import {IconLinkProps} from "../types.ts";
 
 const IconLink: FC<IconLinkProps> = ({ icon, link, altText }) => {
     return (

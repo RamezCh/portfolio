@@ -1,15 +1,9 @@
-import { FC, ReactNode, useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
+import {CardProps} from "../types.ts";
 
-interface Props {
-    title: string;
-    titleSize?: string;
-    subtitleWords?: string[];
-    subtitleSize?: string;
-    text?: string;
-    children?: ReactNode;
-}
 
-export const Card: FC<Props> = ({ title, titleSize, subtitleWords, subtitleSize, text, children }) => {
+
+export const Card: FC<CardProps> = ({ title, titleSize, subtitleWords, subtitleSize, text, children }) => {
     const [currentSubtitle, setCurrentSubtitle] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);

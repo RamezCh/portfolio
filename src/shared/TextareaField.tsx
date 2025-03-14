@@ -1,11 +1,6 @@
-interface Props {
-    labelText?: string;
-    value: string;
-    setter: (value: string) => void;
-    placeholder: string;
-}
+import {TextareaFieldProps} from "../types.ts";
 
-export const TextareaField = (props: Props) => {
+export const TextareaField = (props: TextareaFieldProps) => {
     return (
         <div>
             {props.labelText && (

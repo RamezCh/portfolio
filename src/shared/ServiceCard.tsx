@@ -1,10 +1,5 @@
 import { CenteredTitle } from "./CenteredTitle.tsx";
-
-interface ServiceCardProps {
-    image: string;
-    title: string;
-    description?: string;
-}
+import {ServiceCardProps} from "../types.ts";
 
 export const ServiceCard = ({ image, title, description }: ServiceCardProps) => {
     return (
