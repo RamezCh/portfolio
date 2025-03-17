@@ -56,7 +56,7 @@ export interface ImageCardType {
 
 export interface InputFieldProps {
     labelText?: string;
-    fullName: string;
+    value: string;
     setter: (value: string) => void;
     placeholder: string;
 }
@@ -77,4 +77,18 @@ export interface TextareaFieldProps {
     value: string;
     setter: (value: string) => void;
     placeholder: string;
+}
+
+export interface ProjectCardProps {
+    demo?: string;
+    code: string;
+    imageURL: string;
+    title: string;
+    description: string;
+    tech: string[];
+}
+
+export interface ProjectsDropdownProps {
+    selectedType: string;
+    setSelectedType: (type: string) => void;
 }

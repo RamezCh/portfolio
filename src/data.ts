@@ -140,33 +140,43 @@ export const projects = [
         "code": "https://github.com/RamezCh/TradeHub",
         "imageURL": "./portfolio_images/TradeHub.png",
         "title": "TradeHub",
-        "description": "Full-Stack MERN E-Commerce Website with a lot of great features"
+        "description": "Full-Stack MERN E-Commerce Website with a lot of great features",
+        "tech": ["react", "nodejs", "expressjs", "mongodb", "tailwindcss", "javascript", "html", "css"],
+        "type": "full-stack"
     },
     {
         "code": "https://github.com/RamezCh/ToDo-Backend",
         "imageURL": "./portfolio_images/ToDo.png",
         "title": "ToDo",
-        "description": "Full-Stack Java-React-MongoDB to do list with integration and unit testing"
+        "description": "Full-Stack Java-React-MongoDB to do list with integration and unit testing",
+        "tech": ["react", "java", "spring boot", "mongodb", "typescript", "html", "css"],
+        "type": "backend"
     },
     {
         "demo": "https://ramezch.github.io/Expense-Calculator/",
         "code": "https://github.com/RamezCh/Expense-Calculator",
         "imageURL": "./portfolio_images/Expense_Tracker.png",
         "title": "Expense Tracker",
-        "description": "This is a simple Expense Tracker web application built using HTML, CSS, and JavaScript. It allows users to add, edit, and delete transactions, filter transactions by type and date, and displays a summary of total balance, income, and expenses"
+        "description": "This is a simple Expense Tracker web application built using HTML, CSS, and JavaScript. It allows users to add, edit, and delete transactions, filter transactions by type and date, and displays a summary of total balance, income, and expenses",
+        "tech": ["javascript", "html", "css"],
+        "type": "frontend"
     },
     {
         "demo": "https://ramezch.github.io/Hangman-Game/",
         "code": "https://github.com/RamezCh/Hangman-Game",
         "imageURL": "./portfolio_images/Hangman.png",
         "title": "Hangman Game",
-        "description": "Bored? Try this simple game where you have to guess the word within 8 attempts. Built using HTML, CSS, and JavaScript"
+        "description": "Bored? Try this simple game where you have to guess the word within 8 attempts. Built using HTML, CSS, and JavaScript",
+        "tech": ["javascript", "html", "css"],
+        "type": "frontend"
     },
     {
         "demo": "https://ramezch.github.io/Travel-Website/",
         "code": "https://github.com/RamezCh/Travel-Website",
         "imageURL": "./portfolio_images/Travel.png",
         "title": "Travel Website",
-        "description": "A Single Page Responsive Website built using HTML & CSS"
+        "description": "A Single Page Responsive Website built using HTML & CSS",
+        "tech": ["html", "css"],
+        "type": "frontend"
     }
 ]
