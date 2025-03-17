@@ -26,7 +26,7 @@ Built using **React, TailwindCSS, and TypeScript**, this website showcases my **
 ## 🚀 Live Demo
 
 Check out the live version of my portfolio here:  
-🔗 [Portfolio Website](https://ramezch.github.io/ramez-portfolio-website/)
+🔗 [Portfolio Website](https://ramezch.netlify.app/)
 
 ---
 
