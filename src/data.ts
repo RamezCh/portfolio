@@ -136,6 +136,15 @@ export const tools = [
 
 export const projects = [
     {
+        "demo": "https://internet-supplier-management-system.onrender.com/",
+        "code": "https://github.com/RamezCh/Internet_Supplier_Management_System",
+        "imageURL": "./portfolio_images/ISMS_HomePage.png",
+        "title": "Internet Supplier Management System",
+        "description": "Full-Stack Java, Spring Boot, MongoDB, Typescript, React Management Website. It includes Spring scheduling, unit testing, integration testing and was based on TDD. CI/CD with Docker and Github Actions",
+        "tech": ["react", "java", "spring boot", "mongodb", "tailwindcss", "typescript", "html", "css"],
+        "type": "full-stack"
+    },
+    {
         "demo": "https://tradehub-45ng.onrender.com/",
         "code": "https://github.com/RamezCh/TradeHub",
         "imageURL": "./portfolio_images/TradeHub.png",
