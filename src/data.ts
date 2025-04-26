@@ -162,6 +162,14 @@ export const projects = [
         "type": "backend"
     },
     {
+        "code": "https://github.com/RamezCh/Arabic_Text_Extractor",
+        "imageURL": "./portfolio_images/computer_text_demo.png",
+        "title": "Arabic Text Extractor",
+        "description": "Arabic handwriting OCR fine tuned on tesseract ocr",
+        "tech": ["python", "tesseract ocr", "nlp", "pillow", "opencv", "os", "gradio"],
+        "type": "AI/ML"
+    },
+    {
         "demo": "https://ramezch.github.io/Expense-Calculator/",
         "code": "https://github.com/RamezCh/Expense-Calculator",
         "imageURL": "./portfolio_images/Expense_Tracker.png",

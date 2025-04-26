@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { ProjectsDropdownProps } from "../types.ts";
 
-const categories = ["All", "Frontend", "Backend", "Full-Stack"];
+const categories = ["All", "Frontend", "Backend", "Full-Stack", "AI/ML"];
 
 export const ProjectsDropdown: FC<ProjectsDropdownProps> = ({ selectedType, setSelectedType }) => {
     const [isOpen, setIsOpen] = useState(false);

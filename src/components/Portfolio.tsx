@@ -14,11 +14,13 @@ export const Portfolio = () => {
     const filteredProjects = projects.filter((project) => {
         // Handle full-stack appearing in frontend & backend
         const isFullStack = project.type === "full-stack";
+        const isAIML = project.type === "AI/ML";
         const matchesType =
             selectedType === "All" ||
             project.type === selectedType.toLowerCase() ||
             (selectedType === "Frontend" && isFullStack) ||
-            (selectedType === "Backend" && isFullStack);
+            (selectedType === "Backend" && isFullStack) ||
+            (selectedType === "AI/ML" && isAIML);
 
         const matchesSearch = searchQuery
             ? project.tech.some((tech) => tech.toLowerCase().includes(searchQuery.toLowerCase()))
