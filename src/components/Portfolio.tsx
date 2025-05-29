@@ -30,16 +30,18 @@ export const Portfolio = () => {
     });
 
     return (
-        <section id="portfolio" className="w-full">
+        <section id="portfolio" className="w-full px-2 sm:px-4 md:px-6">
             <CenteredTitle
                 title="Portfolio"
                 text="A collection of side projects in public repositories to learn, practice, and improve my skills"
             />
 
-            {/* Dropdown first, then Search Bar */}
-            <div className="flex flex-col sm:flex-row justify-between items-center px-2 sm:px-4 md:px-6 gap-4 sm:gap-6 my-4">
-                <ProjectsDropdown selectedType={selectedType} setSelectedType={setSelectedType} />
-                <div className="w-full sm:w-[50%] md:w-[40%] lg:w-[30%]">
+            {/* Dropdown on left, input field on right, centered with spacing */}
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-8 sm:mt-10 md:mt-12 lg:mt-16 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+                <div className="w-full sm:w-[40%] md:w-[30%] lg:w-[25%]">
+                    <ProjectsDropdown selectedType={selectedType} setSelectedType={setSelectedType} />
+                </div>
+                <div className="w-full sm:w-[40%] md:w-[30%] lg:w-[25%]">
                     <InputField
                         value={searchQuery}
                         setter={setSearchQuery}
@@ -50,7 +52,7 @@ export const Portfolio = () => {
 
             {/* If no projects match, show fallback */}
             {filteredProjects.length === 0 ? (
-                <div className="text-center text-gray-500 my-10 text-lg">
+                <div className="text-center text-gray-600 my-12 sm:my-16 md:my-20 lg:my-24 text-lg sm:text-xl md:text-2xl font-medium tracking-wide leading-relaxed">
                     Oops! No Related Project Found, maybe in the future 🤷‍♂️
                 </div>
             ) : (
@@ -61,8 +63,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
+                            containerStyle="flex flex-row items-center justify-between w-full py-4 sm:py-6 md:py-8 lg:py-10"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-[90%] md:w-[92%] lg:w-[94%]transition-all duration-300"
                         />
                     </div>
                     <div className="hidden xl:block 2xl:hidden">
@@ -71,8 +73,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
+                            containerStyle="flex flex-row items-center justify-between w-full py-4 sm:py-6 md:py-8 lg:py-10"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-[90%] md:w-[92%] lg:w-[94%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                     <div className="hidden lg:block xl:hidden">
@@ -81,8 +83,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
+                            containerStyle="flex flex-row items-center justify-between w-full py-4 sm:py-6 md:py-8 lg:py-10"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-[90%] md:w-[92%] lg:w-[94%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                     <div className="lg:hidden">
@@ -91,8 +93,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-8 sm:my-12 md:my-16 px-2 sm:px-4 md:px-6 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-2 sm:gap-3 md:gap-4 w-[95%] sm:w-[90%] overflow-hidden transition-all duration-300"
+                            containerStyle="flex flex-row items-center justify-between w-full py-4 sm:py-6 md:py-8"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-2 sm:gap-3 md:gap-5 w-[95%] sm:w-[92%] md:w-[94%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                 </div>

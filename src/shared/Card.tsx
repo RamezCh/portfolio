@@ -75,15 +75,15 @@ export const Card: FC<CardProps> = ({ title, titleSize, subtitleWords, subtitleS
     }, [currentIndex, currentWordIndex, subtitleWords, animationState, currentSubtitle.length]);
 
     return (
-        <div className="flex flex-col justify-evenly">
-            <h2 className={"font-bold " + titleSize}>{title}</h2>
+        <div className="flex flex-col justify-evenly space-y-3 sm:space-y-4">
+            <h2 className={"font-bold tracking-wide leading-tight " + titleSize}>{title}</h2>
             {subtitleWords && (
-                <h3 className={"strong-gradient-text " + subtitleSize} style={{ minHeight: "1em" }}>
+                <h3 className={"strong-gradient-text tracking-normal leading-tight " + subtitleSize} style={{ minHeight: "1em" }}>
                     {currentSubtitle}
                     <span className="animate-cursor-blink">|</span>
                 </h3>
             )}
-            {text && <p className="text-[#6E6D8F] content-evenly text-lg sm:text-xl md:text-2xl transition-all duration-300">{text}</p>}
+            {text && <p className="text-[#6E6D8F] text-lg sm:text-xl md:text-2xl leading-relaxed transition-all duration-300">{text}</p>}
             {children}
         </div>
     );

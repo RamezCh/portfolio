@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SmoothLink } from "../shared/SmoothLink.tsx";
 import { navLinks } from "../data.ts";
+import Button from "../shared/Button.tsx";
 
 export const NavbarMobile = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -10,15 +11,15 @@ export const NavbarMobile = () => {
     };
 
     return (
-        <div className="flex justify-between mx-0 p-[1.5%] top-0 fixed bg-white w-full z-50 shadow-2xs">
+        <div className="flex justify-between items-center mx-0 p-[1.5%] top-0 fixed bg-white w-full z-50 shadow-sm border-b border-gray-100 transition-all duration-300">
             {/* Logo */}
-            <h1 className="font-vampiro gradient-text text-4xl">{'<R_Ch/>'}</h1>
+            <h1 className="font-vampiro gradient-text text-4xl transition-transform duration-300 hover:scale-105">{'<R_Ch/>'}</h1>
 
             {/* Dropdown Menu for mobile screens */}
             <div className="relative">
                 <button
                     onClick={toggleDropdown}
-                    className="flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+                    className="flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none transition-all duration-300"
                 >
                     <svg
                         className="w-6 h-6"
@@ -38,18 +39,18 @@ export const NavbarMobile = () => {
 
                 {/* Dropdown Content */}
                 {isDropdownOpen && (
-                    <div className="absolute right-0 mt-1 w-48 bg-white rounded-md shadow-lg z-50">
-                        <div className="flex flex-col p-7">
+                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 animate-fade-in-down border border-gray-100">
+                        <div className="flex flex-col p-4 gap-3">
                             { navLinks.map((info) => <SmoothLink key={info.name} link={info.dest}>
-                                <span className="hover:text-[#7051EF] hover:text-lg transition-all duration-500 ease-in-out">
+                                <span className="hover:text-[#7051EF] font-medium py-1 transition-all duration-300 ease-in-out hover:underline hover:underline-offset-4">
                                     {info.name}
                                 </span>
                             </SmoothLink>)}
-                            <SmoothLink
-                                link="contact"
-                            >
-                                Contact Me
-                            </SmoothLink>
+                            <div className="mt-2 pt-2 border-t border-gray-100">
+                                <SmoothLink link="contact">
+                                    <Button text="Contact Me" isPrimary={true} isSmall={true} />
+                                </SmoothLink>
+                            </div>
                         </div>
                     </div>
                 )}

@@ -6,13 +6,15 @@ const Button: FC<ButtonProps> = ({
                                                   onClick,
                                                   downloadPath,
                                                   fileName,
-                                                  isPrimary
+                                                  isPrimary,
+                                                  isSmall = false
                                               }) => {
-    const baseStyle =
-        'w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2 sm:py-3 text-sm sm:text-base md:text-lg font-roboto rounded-xl transition-all duration-300 ease-in-out shadow-md hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] active:shadow-inner focus:outline-none focus:ring-2 focus:ring-[#7051EF] focus:ring-opacity-50 transform';
+    const baseStyle = isSmall
+        ? 'w-full sm:w-auto px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-base font-medium tracking-wide rounded-lg transition-all duration-300 ease-in-out shadow-sm hover:scale-[1.02] hover:shadow-md active:scale-[0.98] active:shadow-inner focus:outline-none focus:ring-1 focus:ring-[#7051EF] focus:ring-opacity-50 transform'
+        : 'w-full sm:w-auto px-7 sm:px-9 md:px-12 py-3 sm:py-4 text-base sm:text-lg md:text-xl font-medium tracking-wide rounded-xl transition-all duration-300 ease-in-out shadow-md hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] active:shadow-inner focus:outline-none focus:ring-2 focus:ring-[#7051EF] focus:ring-opacity-60 transform';
 
-    const primaryStyle = 'text-white bg-gradient-to-r from-[#8D74F2] to-[#7051EF] hover:bg-gradient-to-r hover:from-[#7051EF] hover:to-[#6446e0]';
-    const secondaryStyle ='bg-white text-[#7051EF] hover:bg-[#7051EF] hover:text-white hover:shadow-lg';
+    const primaryStyle = 'text-white bg-gradient-to-r from-[#8D74F2] to-[#7051EF] hover:bg-gradient-to-r hover:from-[#7051EF] hover:to-[#6446e0] border border-transparent';
+    const secondaryStyle ='bg-white text-[#7051EF] hover:bg-gray-50 hover:text-[#6446e0] hover:shadow-lg border border-[#7051EF]/20 hover:border-[#7051EF]/40';
 
     if(downloadPath)  return (
         <a href={downloadPath} download={fileName}>

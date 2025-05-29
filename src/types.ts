@@ -13,7 +13,8 @@ export type ButtonProps = {
     onClick?: () => void,
     downloadPath?: string,
     fileName?:string,
-    isPrimary:boolean
+    isPrimary:boolean,
+    isSmall?:boolean
 };
 
 export interface CardProps {
