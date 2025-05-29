@@ -7,10 +7,10 @@ export const ProjectsDropdown: FC<ProjectsDropdownProps> = ({ selectedType, setS
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="relative w-48">
+        <div className="relative w-full sm:w-48">
             {/* Dropdown Button */}
             <button
-                className="w-full px-4 py-2 text-left border rounded-lg shadow-md focus:outline-none"
+                className="w-full px-4 py-2 text-left border rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
                 style={{
                     background: "linear-gradient(to bottom right, #8D74F2, #7051EF)",
                     color: "rgba(255, 255, 255, 0.83)"
@@ -23,7 +23,7 @@ export const ProjectsDropdown: FC<ProjectsDropdownProps> = ({ selectedType, setS
             {/* Dropdown Menu */}
             {isOpen && (
                 <ul
-                    className="absolute left-0 w-full mt-2 border rounded-lg shadow-md z-10"
+                    className="absolute left-0 w-full mt-2 border rounded-lg shadow-md z-10 animate-fade-in-down"
                     style={{
                         background: "linear-gradient(to bottom right, #8D74F2, #7051EF)",
                         color: "rgba(255, 255, 255, 0.83)"
@@ -32,7 +32,7 @@ export const ProjectsDropdown: FC<ProjectsDropdownProps> = ({ selectedType, setS
                     {categories.map((category) => (
                         <li
                             key={category}
-                            className="px-4 py-2 cursor-pointer hover:bg-purple-700 hover:text-white"
+                            className="px-4 py-2 cursor-pointer hover:bg-purple-700 hover:text-white transition-all duration-200 hover:pl-6 focus:pl-6 focus:outline-none focus:bg-purple-700 focus:text-white"
                             style={{
                                 color: selectedType === category ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.83)"
                             }}

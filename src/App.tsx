@@ -10,15 +10,15 @@ import {ToolsPad} from "./components/ToolsPad.tsx";
 import {aboutMe, expertise} from "./data.ts";
 import {NavbarMobile} from "./components/NavbarMobile.tsx";
 import {Portfolio} from "./components/Portfolio.tsx";
+import ScrollToTop from "./shared/ScrollToTop.tsx";
 
 function App() {
-
     return (
         <>
             <div className="hidden lg:block"><Navbar/></div>
             <div className="lg:hidden"><NavbarMobile/></div>
             <div className="w-full h-36 block"></div>
-            <div className="relative z-1 m-8">
+            <div className="relative z-1 m-4 sm:m-6 md:m-8">
                 <Home/>
                 <Services/>
                 <section id="tools">
@@ -33,6 +33,7 @@ function App() {
                 <Portfolio/>
                 <Contact/>
             </div>
+            <ScrollToTop />
         </>
     );
 }

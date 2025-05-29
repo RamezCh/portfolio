@@ -37,9 +37,9 @@ export const Portfolio = () => {
             />
 
             {/* Dropdown first, then Search Bar */}
-            <div className="flex flex-row justify-between px-30 gap-6 my-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center px-2 sm:px-4 md:px-6 gap-4 sm:gap-6 my-4">
                 <ProjectsDropdown selectedType={selectedType} setSelectedType={setSelectedType} />
-                <div className="w-[30%]">
+                <div className="w-full sm:w-[50%] md:w-[40%] lg:w-[30%]">
                     <InputField
                         value={searchQuery}
                         setter={setSearchQuery}
@@ -61,8 +61,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-20 px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-6 w-[90%] overflow-hidden"
+                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                     <div className="hidden xl:block 2xl:hidden">
@@ -71,8 +71,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-20 px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-6 w-[90%] overflow-hidden"
+                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                     <div className="hidden lg:block xl:hidden">
@@ -81,8 +81,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-20 px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-6 w-[90%] overflow-hidden"
+                            containerStyle="flex flex-row items-center justify-between my-10 sm:my-16 md:my-20 px-4 sm:px-6 md:px-10 w-full"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-3 sm:gap-4 md:gap-6 w-[90%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                     <div className="lg:hidden">
@@ -91,8 +91,8 @@ export const Portfolio = () => {
                             itemsCollection={filteredProjects}
                             ReactComponent={ProjectCard}
                             key="carousel-projects"
-                            containerStyle="flex flex-row items-center justify-between my-20 px-10 w-full"
-                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-6 w-[90%] overflow-hidden"
+                            containerStyle="flex flex-row items-center justify-between my-8 sm:my-12 md:my-16 px-2 sm:px-4 md:px-6 w-full"
+                            itemContainerStyle="flex flex-row justify-center flex-nowrap gap-2 sm:gap-3 md:gap-4 w-[95%] sm:w-[90%] overflow-hidden transition-all duration-300"
                         />
                     </div>
                 </div>

@@ -52,3 +52,84 @@ body {
             0 300px;
     background-repeat: repeat-y;
 }
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
+
+.animate-pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fade-in-down 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes cursor-blink {
+    0%, 60% {
+        opacity: 1;
+    }
+    60%, 65% {
+        opacity: 0.8;
+    }
+    65%, 70% {
+        opacity: 0.6;
+    }
+    70%, 75% {
+        opacity: 0.4;
+    }
+    75%, 80% {
+        opacity: 0.2;
+    }
+    80%, 100% {
+        opacity: 0;
+    }
+}
+
+.animate-cursor-blink {
+    animation: cursor-blink 1.2s infinite;
+}

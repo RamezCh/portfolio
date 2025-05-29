@@ -21,12 +21,12 @@ const ContactForm: FC = () => {
     };
 
     return (
-        <div className="w-[80%] mx-auto p-20">
+        <div className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto p-4 sm:p-8 md:p-12 lg:p-20">
             <div className="space-y-4">
                 <InputField value={fullName} setter={setFullName} placeholder="Alex Smith" labelText="Full Name" />
                 <InputField value={subject} setter={setSubject} placeholder="Subject" labelText="Subject" />
                 <TextareaField value={message} setter={setMessage} placeholder="Your message..." labelText="Message"/>
-                <div>
+                <div className="w-full">
                     <Button text="Send Message" isPrimary={true} onClick={handleSendMessage} />
                 </div>
             </div>
