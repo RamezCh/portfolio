@@ -71,6 +71,7 @@ export interface ServiceCardProps {
 export interface SmoothLinkProps {
     children: ReactNode;
     link: string;
+    onClick?: () => void;
 }
 
 export interface TextareaFieldProps {

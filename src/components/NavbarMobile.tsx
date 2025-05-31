@@ -41,13 +41,13 @@ export const NavbarMobile = () => {
                 {isDropdownOpen && (
                     <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 animate-fade-in-down border border-gray-100">
                         <div className="flex flex-col p-4 gap-3">
-                            { navLinks.map((info) => <SmoothLink key={info.name} link={info.dest}>
+                            { navLinks.map((info) => <SmoothLink key={info.name} link={info.dest} onClick={() => setIsDropdownOpen(false)}>
                                 <span className="hover:text-[#7051EF] font-medium py-1 transition-all duration-300 ease-in-out hover:underline hover:underline-offset-4">
                                     {info.name}
                                 </span>
                             </SmoothLink>)}
                             <div className="mt-2 pt-2 border-t border-gray-100">
-                                <SmoothLink link="contact">
+                                <SmoothLink link="contact" onClick={() => setIsDropdownOpen(false)}>
                                     <Button text="Contact Me" isPrimary={true} isSmall={true} />
                                 </SmoothLink>
                             </div>
